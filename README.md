@@ -24,7 +24,7 @@
 2. 24V power adapter
 
 > One-time network settings to do:
-1. Set the wired connection to `Link-ocal Only`
+1. Set the wired connection to `Link-Local Only`
 2. Disable the system firewall:
     ```bash
     # Disabling
@@ -36,7 +36,7 @@
     ```
 3. Install `ethtool` (generally comes pre-installed):
     ```bash
-    sudo ap install ethtool
+    sudo apt install ethtool
     ```
 4. Increase maximum transmitted units:
     This was most probably the main problem with UDP packet length. 
@@ -180,5 +180,49 @@ You can check the topics for the data published and also [record and replay data
 
 
 --- 
+
+
+### Topics being published:
+
+- `/os1_node/imu_packets` and `/os1_node/lidar_packets` aren't being published.
+
+- Empty for now:
+
+    `/clicked_point`
+
+    `/initialpose`
+
+    `/move_base_simple/goal`
+
+    `/tf`
+
+
+
+- Image topics:
+
+    `/img_node/nearir_image`
+
+    `/img_node/range_image`
+
+    `/img_node/reflec_image`
+
+    `/img_node/signal_image`
+
+- IMU:
+
+    `/os_cloud_node/imu` - Well structured.
+
+    `/os_node/imu_packets`
+
+- Point cloud:
+
+    `/os_cloud_node/points`
+
+    `/os_node/lidar_packets` - Lesser data in comparision. 
+
+
+- Static transform: `/tf_static` 
+
+---
 
 
